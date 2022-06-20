@@ -19,6 +19,8 @@
 #define RETURN_ERR(A) {\
     enum SeqPaintError err = A;\
     if (err != SEQPAINT_ERROR_NONE) {\
+        free(new);\
+        stbi_image_free(img);\
         return err;\
     }\
 }
@@ -155,9 +157,8 @@ getSequence(char const* file, char const* ret, struct SeqPaintParam* param)
 
     int x, y;
     unsigned char* img;
-    RETURN_ERR(readImg(file, &img, &x, &y))
-    
     char* new = NULL;
+    RETURN_ERR(readImg(file, &img, &x, &y))
     RETURN_ERR(allocSeq(param, x, y, &new));
     
     if (param->area) {
