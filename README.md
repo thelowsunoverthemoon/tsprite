@@ -15,7 +15,25 @@
 
 1. Download ```stb_image.h``` [here](https://github.com/nothings/stb/blob/master/stb_image.h), include in the same directory as ```seqpaint.h```.
 
-2. Include ```seqpaint.h``` in your project.
+2. Include ```seqpaint.h``` in your project. List of supported image types at the top of [here](https://github.com/nothings/stb/blob/master/stb_image.h).
+
+## Examples
+
+### Default
+
+![image](https://i.imgur.com/jKakH1h.png)
+
+### Alternate Character Set
+
+![image](https://i.imgur.com/MltT1gD.png)
+
+### Different Blending
+
+![image](https://i.imgur.com/fJ7NPD8.png)
+
+### Grayscale Filter
+
+![image](https://i.imgur.com/H43JQZK.png)
 
 ## Documentation
 
