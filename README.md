@@ -29,7 +29,7 @@ enum SeqPaintError getSequence(char const* file, char const* ret, struct SeqPain
 
 ### Parameters
 
-You do not have to include all the parameters. In C99, you can specify individual members; the unspecified ones will be the default values. For example:
+You **do not** have to include all the parameters. In C99, you can specify individual members; the unspecified ones will be the **default** values. For example:
 
 ```C
 struct SeqPaintParam param = {
@@ -55,3 +55,13 @@ struct SeqPaintParam param = {
 | ```appendFile``` | Append to file if true | ```bool``` | ```false```|
 
 ## Error Handling
+
+```getSequence``` will return one of these errors.
+
+| Error | Meaning |
+| ------------- | ------------- |
+| ```SEQPAINT_ERROR_NONE``` | No errors, all good! |
+| ```SEQPAINT_ERROR_IMAGE``` | Image failed to load |
+| ```SEQPAINT_ERROR_MEMORY``` | Cannot allocate memory for sequence |
+| ```SEQPAINT_ERROR_COORD``` | ```area``` was not in bound |
+| ```SEQPAINT_ERROR_FILE``` | File to write cannot be opened |
