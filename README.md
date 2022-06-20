@@ -9,7 +9,7 @@
 * Optional background colour
 * Optional colour blending
 * Custom character sets (supports UTF-8 unicode)
-* Custom filters, area, character distribution
+* Custom filters, area, character distribution, colouring
 
 ## How to Use
 
