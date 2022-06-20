@@ -4,7 +4,7 @@
 
 ## Features
 
-* Simple to use : only one function
+* Simple to use : only one function!
 * Supports transparency
 * Optional background colour
 * Optional colour blending
