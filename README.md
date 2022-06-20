@@ -8,7 +8,8 @@
 * Supports transparency
 * Optional background colour
 * Optional colour blending
-* Custom character sets, filters, area
+* Custom character sets (supports UTF-8 unicode)
+* Custom filters, area, character distribution
 
 ## How to Use
 
@@ -39,17 +40,18 @@ struct SeqPaintParam param = {
 
 | Parameters  | Description | Type | Default |
 | ------------- | ------------- | ------------- | ------------- | 
-| ```scaleX``` | | | |
-| ```scaleY``` | | | |
-| ```filter``` | | | |
-| ```charLen``` | | | |
-| ```charSet``` | | | |
-| ```charFunc``` | | | |
-| ```range``` | | | |
-| ```blend``` | | | |
-| ```area``` | | | |
-| ```alphaRep``` | | | |
-| ```noConsole``` | | | |
-| ```appendFile``` | | | |
+| ```scaleX``` | X scale of image. Higher is smaller | ```int``` | ```1``` |
+| ```scaleY``` | Y scale of image. Higher is smaller | ```int``` | ```1``` |
+| ```filter``` | Filters image. One of ```SEQPAINT_FILTER_NONE```, ```SEQPAINT_FILTER_SEPIA```, ```SEQPAINT_FILTER_GRAYSCALE```, ```SEQPAINT_FILTER_INVERT```, or ```SEQPAINT_FILTER_CUSTOM```. Custom filter requires defining the ```SEQPAINT_FILTER_EXPR``` filter macro, where you can set ```col->r```, ```col->g```, ```col->b``` to values. | Read desc | ```SEQPAINT_FILTER_NONE``` |
+| ```charLen``` | Length of character set | ```int``` | ```1``` |
+| ```charSet``` | Character set; set of characters to make up image | ```char**``` | ```{" "}``` |
+| ```charFunc``` | Function that determines where to put characters. Can be ```charBright``` (brighter colours will get higher set characters), ```charRand``` (random), and ```charDefault``` (first character of set), or you can pass in your own function in the form ```char* func(struct SeqPaintCol, int, char**)```| Read desc | ```charDefault``` |
+| ```range``` | Number of characters to blend | ```int``` | ```0``` |
+| ```blend``` | Blend surrounding colours (take average rgb values) according to range. One of ```SEQPAINT_BLEND_NONE```, ```SEQPAINT_BLEND_X``` (samples from x direction), ```SEQPAINT_BLEND_Y``` (samples from y), ```SEQPAINT_BLEND_XY``` (samples from x and y)| Read desc | ```SEQPAINT_BLEND_NONE``` |
+| ```area``` | Area of image to convert in the form ```&(struct SeqPaintRect) {x, y, w, h}``` | Read desc | Entire image |
+| ```alphaRep``` | Colour to replace transparency in the form ```&(struct SeqPaintCol) {r, g, b}```| Read desc | Transparent |
+| ```disp``` | Type of colouring to use. One of ```SEQPAINT_DISP_BKG``` (colour background) or ```SEQPAINT_DISP_CHAR``` (colour characters) | Read desc | ```SEQPAINT_DISP_BKG``` |
+| ```noConsole``` | Don't print to console if true | ```bool``` | ```false``` |
+| ```appendFile``` | Append to file if true | ```bool``` | ```false```|
 
 ## Error Handling
