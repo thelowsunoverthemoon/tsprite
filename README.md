@@ -15,7 +15,7 @@
 
 1. Download ```stb_image.h``` [here](https://github.com/nothings/stb/blob/master/stb_image.h), include in the same directory as ```seqpaint.h```.
 
-2. Include ```seqpaint.h``` in your project. List of supported image types at the top of [here](https://github.com/nothings/stb/blob/master/stb_image.h).
+2. Include ```seqpaint.h``` in your project. List of supported image types at the top of [here](https://github.com/nothings/stb/blob/master/stb_image.h). This library uses "Truecolor" escape sequences, which only works if your console supports it.
 
 ## Examples
 
