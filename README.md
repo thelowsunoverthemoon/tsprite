@@ -40,7 +40,7 @@
 ### Function
 
 ```C
-enum SeqPaintError getSequence(char const* file, char const* ret, struct SeqPaintParam const* param)
+enum SeqPaintError getSequence(char const* file, char const* ret, struct SeqPaintParam* param)
 ```
 
 ```file``` is the image you want to use. ```ret``` is the file the sequence will be put in. ```param``` is the list of options, or ```NULL``` if you want all defaults.
