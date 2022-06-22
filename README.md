@@ -1,6 +1,6 @@
 <h1 align="center">SeqPaint</h1>
 
-<p align="center">A single header library to convert images to VT100 escape sequences</p>
+<p align="center">A single header library to convert images to ANSI escape sequences</p>
 
 ## Features
 
