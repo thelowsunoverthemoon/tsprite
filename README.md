@@ -1,6 +1,6 @@
 <h1 align="center">SeqPaint</h1>
 
-<p align="center">A single header library to convert images to ANSI escape sequences</p>
+<p align="center">A single header library to convert images to Windows VT100 escape sequences</p>
 
 ## Features
 
@@ -15,7 +15,7 @@
 
 1. Download ```stb_image.h``` [here](https://github.com/nothings/stb/blob/master/stb_image.h), include in the same directory as ```seqpaint.h```.
 
-2. Include ```seqpaint.h``` in your project. List of supported image types at the top of [here](https://github.com/nothings/stb/blob/master/stb_image.h). This library uses "Truecolor" escape sequences, which only works if your console supports it.
+2. Include ```seqpaint.h``` in your project. Important : this is Windows 10+ only. List of supported image types at the top of [here](https://github.com/nothings/stb/blob/master/stb_image.h). This library uses "Truecolor" escape sequences, which only works if your console supports it.
 
 ## Examples
 
