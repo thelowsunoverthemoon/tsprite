@@ -1,11 +1,12 @@
 <h1 align="center">SeqPaint</h1>
 
-<p align="center">A single header library to convert images to Windows VT100 escape sequences</p>
+<p align="center">A single header library to convert images to Windows escape sequence sprites</p>
 
 ## Features
 
 * Simple to use : only one function!
-* Supports transparency
+* Supports transparency (shows characters underneath in console)
+* Can be placed anywhere from cursor position
 * Optional background colour
 * Optional colour blending
 * Custom character sets (supports UTF-8 unicode)
@@ -21,19 +22,19 @@
 
 ### Default
 
-![image](https://i.imgur.com/jKakH1h.png)
+![image](img/default.png)
 
 ### Alternate Character Set
 
-![image](https://i.imgur.com/MltT1gD.png)
+![image](img/altchar.png)
 
 ### Different Blending
 
-![image](https://i.imgur.com/fJ7NPD8.png)
+![image](img/difblend.png)
 
 ### Grayscale Filter
 
-![image](https://i.imgur.com/H43JQZK.png)
+![image](img/grayscale.png)
 
 ## Documentation
 
