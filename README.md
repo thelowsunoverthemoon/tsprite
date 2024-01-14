@@ -24,21 +24,17 @@ This library is intended for sprite based graphics in console based games / visu
 
 ## Examples
 
-### Default
+### Transparent Sprite + Overlay Animation
 
-![image](img/default.png)
+![image](img/anim.gif)
 
-### Alternate Character Set
+### Large-Scale Sprite + Alternate Character Set
 
 ![image](img/altchar.png)
 
-### Different Blending
+### Single Sprite + Various Filters
 
-![image](img/difblend.png)
-
-### Grayscale Filter
-
-![image](img/grayscale.png)
+![image](img/filter.png)
 
 ## Documentation
 
