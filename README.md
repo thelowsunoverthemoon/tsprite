@@ -1,6 +1,6 @@
 <h1 align="center">tsprite</h1>
 
-<p align="center">A single header library to convert images to Windows escape sequence sprites</p>
+<p align="center">Single header library to convert images to Windows escape sequence sprites</p>
 
 ## Features
 
@@ -14,11 +14,11 @@
 * Sprites optimized for space
 
 ## Usage
-This library is intended for sprite based graphics in console based games / visualizations. For example, creating console sprites in Batch file games (see examples). The various options allow you to create sprites that support layering and take up as little characters as possible. Furthermore, it is Windows 10+ only, using sequences from Microsoft's VT100 sequence emulation.
+This library is intended for sprite based graphics in console based games / visualizations. For example, creating console sprites in Batch file games (see examples). The various options allow you to create sprites that support layering and take up as little characters as possible. Unfortunately, it is Windows 10+ only, since it relies on Microsoft's VT100 sequence emulation.
 
 ## How to Include
 
-1. Download ```stb_image.h``` [here](https://github.com/nothings/stb/blob/master/stb_image.h), include in the same directory as ```tsprite.h```.
+1. Download ```stb_image.h``` [here](https://github.com/nothings/stb/blob/master/stb_image.h). Include in the same directory as ```tsprite.h```.
 
 2. Include ```tsprite.h``` in your project. Important : this is Windows 10+ only. List of supported image types at the top of [here](https://github.com/nothings/stb/blob/master/stb_image.h). This library uses "Truecolor" escape sequences, which only works if your console supports it.
 
