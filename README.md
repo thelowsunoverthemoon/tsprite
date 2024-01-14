@@ -14,7 +14,7 @@
 * Sprites optimized for space
 
 ## Usage
-This library is intended for use in console based games / graphics. For example, creating console sprites in Batch file games (see examples). The various options allow you to create sprites that support layering and take up as little characters as possible. Furthermore, it is Windows 10+ only, using sequences from Microsoft's VT100 sequence emulation.
+This library is intended for sprite based graphics in console based games / visualizations. For example, creating console sprites in Batch file games (see examples). The various options allow you to create sprites that support layering and take up as little characters as possible. Furthermore, it is Windows 10+ only, using sequences from Microsoft's VT100 sequence emulation.
 
 ## How to Include
 
