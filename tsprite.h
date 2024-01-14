@@ -156,7 +156,7 @@ tsprite_get_sequence(char const* file, struct tsprite_param* param)
             (param->area->x + param->area->w) > x ||
             (param->area->y + param->area->h) > y
         ) {
-               return TSPRITE_ERROR_COORD;
+            return TSPRITE_ERROR_COORD;
         }
         write_sequence(img, start, param, x, y, param->area);
     } else {
@@ -204,11 +204,11 @@ write_sequence(unsigned char* img, char* loop, struct tsprite_param* param, int 
                     loop += sprintf(loop, "%s", param->str_func(prev, param->str_len, param->str_set));
                 } else {
                     loop += sprintf(
-                                        loop,
-                                        "\x1b[%d;2;%d;%d;%dm%s",
-                                        param->disp == TSPRITE_DISP_BKG ? 48 : 38, 
-                                        col.r, col.g, col.b, param->str_func(col, param->str_len, param->str_set)
-                                    );
+                        loop,
+                        "\x1b[%d;2;%d;%d;%dm%s",
+                        param->disp == TSPRITE_DISP_BKG ? 48 : 38, 
+                        col.r, col.g, col.b, param->str_func(col, param->str_len, param->str_set)
+                    );
                     prev.r = col.r, prev.g = col.g, prev.b = col.b;
                 }
             }
