@@ -24,7 +24,7 @@ This tool is **NOT** created for displaying detailed terminal art. There are man
 
 ### Multiple Animated Sprites + Movement
 
-![image](img/kaho.gif)
+<img src="img/kaho.gif" height="500" width="700">
 
 ### Static Sprite + Various Filters
 
@@ -40,8 +40,8 @@ This tool is **NOT** created for displaying detailed terminal art. There are man
 
 ## How to Use CMD Tool
 
-1. Download above dependencies, ```lib_tsprite.h```, and [```argparse```](https://github.com/cofyc/argparse). Include necessary files in same directory as ```tsprite.c```.
-2. Compile ```tsprite.c``` and link together with ```args.c```. You can either use Cmake, but it is also simple via the commandline. For example, with MSVC, it can be as simple as
+1. Download above dependencies, ```lib_tsprite.h```, and [```argparse```](https://github.com/cofyc/argparse). Include all ```.c``` and ```.h``` files in same directory as ```tsprite.c```.
+2. Compile ```tsprite.c``` and link together with ```args.c```. You can use ```cmake```, but it is also easy via the commandline. For example, with MSVC, it can be as simple as
 
 ```
 cl tsprite.c args.c
