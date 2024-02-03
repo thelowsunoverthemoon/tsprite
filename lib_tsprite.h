@@ -503,15 +503,13 @@ alloc_seq(struct tsprite_param* param, int x, int y, char** new)
             gtr_strlen = strlen(param->str_set[i]);
         }
     }
+    
     // formula gets the number digits in length for back sequence
     int seq_size = param->use_cursor_seq ? (int) (floor(log10(x)) + 1) + SIZE_NXLINE_CURSOR : SIZE_NXLINE_SAVE;   
     *new = malloc( // note : approx formula that is >= needed memory
         ((SIZE_COL + gtr_strlen) * x * y) + (y * seq_size) + (param->use_cursor_seq * SIZE_SAVE) + SIZE_NULL
     );
-    if (!*new) {
-        return TSPRITE_ERROR_MEMORY;
-    }
-    return TSPRITE_ERROR_NONE;
+    return *new ? TSPRITE_ERROR_NONE : TSPRITE_ERROR_MEMORY;
 }
 
 static enum tsprite_error
