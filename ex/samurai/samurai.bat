@@ -5,6 +5,12 @@ MODE 64, 32
 
 REM Reads converted sprites from file and loops them with a rain animation
 
+IF not exist sprite.txt (
+    ECHO Run the .c file first to generate sprites
+    PAUSE
+    EXIT /B
+)
+
 SET /A "sprite[num]=sprite[cur]=0"
 FOR /F "tokens=*" %%? in (sprite.txt) DO (
     SET "samurai[!sprite[num]!]=%%?"

@@ -1,4 +1,7 @@
-#include "tsprite.h"
+#include <stdio.h>
+
+#define TSPRITE_IMPLEMENTATION
+#include "lib_tsprite.h"
 
 // Create sprites from spritesheet to import to a Batch file game
 
@@ -23,24 +26,20 @@ main(void)
         .h = SPRITE_HEIGHT
     };
     struct tsprite_param param = {
-        .scale_x = 1,
-        .scale_y = 1,
-        .blend = TSPRITE_BLEND_NONE,
+        .append_file = true,
         .ret_file = FILE_NAME,
         .col_threshold = 5,
         .use_cursor_seq = true,
         .area = &area,
         .disp = TSPRITE_DISP_CHAR,
         .str_set = (char*[]) { "█" },
-        .str_len = 1,
-        .ret_file = FILE_NAME,
-        .append_file = true
+        .str_len = 1
     };
         
     for (int i = 0; i < SPRITE_NUM; i++) {
         enum tsprite_error err = tsprite_get_sequence(SPRITESHEET_NAME, &param);
         if (err != TSPRITE_ERROR_NONE) {
-            printf("tsprite error %d", err);
+            fprintf(stderr, "tsprite error %d", err);
             return EXIT_FAILURE;
         }
         area.x += SPRITE_WIDTH;
